@@ -21,6 +21,10 @@ class DoubleLinkList(SingleLinkList):
     def add(self, item):
         """链表头部添加元素"""
         node = Node(item)
+        # 为空链表时
+        if self.is_empty():
+            self._head = node
+            return 
         # 将新节点的链接域指向头结点，即 _head 指向的位置
         node.next = self._head
         # 将链表的头_head 指向新节点
