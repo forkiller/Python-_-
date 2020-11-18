@@ -9,6 +9,7 @@ from singlenode import SingleLinkList
 
 
 class Node(object):
+    """双向链表节点"""
     def __int__(self, item):
         self.elem = item
         self.next = None
@@ -16,7 +17,7 @@ class Node(object):
 
 
 class DoubleLinkList(SingleLinkList):
-
+    """双向链表"""
     def add(self, item):
         """链表头部添加元素"""
         node = Node(item)
